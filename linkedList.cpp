@@ -2,7 +2,8 @@
 #include <cstdlib>
 #include <chrono>
 
-#include "functions.h"
+#include "linkedList.h"
+#include "SortingAlgorithm/sorting.h"
 
 using std::cout;
 using std::cin;
