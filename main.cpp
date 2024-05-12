@@ -18,18 +18,18 @@ int main(){
 
     Node* head1 = NULL;
 
-    for(int exec = 0; exec < 1000; exec++) {
+    for(int exec = 0; exec < 100; exec++) {
         // Criação do cabeçaço da lista
         head1 = NULL;
 
-        for(int c = 1; c <= 1000; c++) {
+        for(int c = 1; c <= 10000; c++) {
             int iNum = rand();
             addElementFront(&head1, iNum);
         }
 
         // Ordena a lista
         auto timeStart = high_resolution_clock::now();
-        insertionSort(head1);
+        selectionSort(head1);
         auto timeStop = high_resolution_clock::now();
 
         auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
