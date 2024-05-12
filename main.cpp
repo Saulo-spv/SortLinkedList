@@ -29,7 +29,7 @@ int main(){
 
         // Ordena a lista
         auto timeStart = high_resolution_clock::now();
-        selectionSort(head1);
+        optimizedSelectionSort(head1);
         auto timeStop = high_resolution_clock::now();
 
         auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);

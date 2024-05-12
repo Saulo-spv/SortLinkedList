@@ -11,9 +11,9 @@ using std::endl;
 
 void bubbleSort(Node* head) {
 
-    // Verifica se a lista está vazia
-    if (head == nullptr) {
-        cout << "Empty list!" << endl;
+    // Condição de lista vazia ou unitária
+    if(head == NULL || head->ptrNext == NULL) {
+        cout << "It can't be ordened" << endl;
         return;
     }
 
@@ -36,9 +36,9 @@ void bubbleSort(Node* head) {
 
 void optimizedBubbleSort(Node* head) {
 
-    // Verifica se a lista está vazia
-    if (head == nullptr) {
-        cout << "Empty list!" << endl;
+    // Condição de lista vazia ou unitária
+    if(head == NULL || head->ptrNext == NULL) {
+        cout << "It can't be ordened" << endl;
         return;
     }
 

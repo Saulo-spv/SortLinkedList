@@ -10,6 +10,12 @@ using std::string;
 using std::endl;
 
 void insertionSort(Node* head) {
+    // Condição de lista vazia ou unitária
+    if(head == NULL || head->ptrNext == NULL) {
+        cout << "It can't be ordened" << endl;
+        return;
+    }
+
     Node* order = head->ptrNext; // Começa do segundo nó
     Node* temp = NULL;
     while(order != NULL){

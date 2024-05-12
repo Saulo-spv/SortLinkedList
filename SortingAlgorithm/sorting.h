@@ -2,9 +2,7 @@
 #define SORTING_H
 
 // Selection Sort
-void selectionSort_Aux(Node*);
 void selectionSort(Node*);
-void optimizedSelectionSort_Aux(Node*);
 void optimizedSelectionSort(Node*);
 
 // Bubble Sort
