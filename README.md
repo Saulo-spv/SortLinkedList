@@ -3,8 +3,8 @@
 Este repositório é dedicado à implementação de algoritmos de ordenação para listas duplamente encadeadas.
 
 ## Colaboradores
-- [Seu nome](https://github.com/Saulo-spv)
-- [Nome do colaborador 2](https://github.com/santos-gmatos)
+- [Saulo Pires](https://github.com/Saulo-spv)
+- [Gabriel Matos](https://github.com/santos-gmatos)
 
 ## Estrutura das Pastas
 
