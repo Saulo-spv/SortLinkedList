@@ -1,17 +1,24 @@
 #pragma once
 
-// Selection Sort
-void selectionSort(Node*);
-void optimizedSelectionSort(Node*);
+using LinkedList::Node;
 
-// Bubble Sort
-void bubbleSort(Node*);
-void optimizedBubbleSort(Node*);
+namespace Sorting
+{
+    
+    // Selection Sort
+    void selectionSort(Node*);
+    void optimizedSelectionSort(Node*);
 
-// Insertion Sort
-void insertionSort(Node*);
+    // Bubble Sort
+    void bubbleSort(Node*);
+    void optimizedBubbleSort(Node*);
 
-// Bogo Sort
-bool isSorted(Node*);
-void shuffleList(Node*, int);
-void bogoSort(Node*);
+    // Insertion Sort
+    void insertionSort(Node*);
+
+    // Bogo Sort
+    bool isSorted(Node*);
+    void shuffleList(Node*, int);
+    void bogoSort(Node*);
+
+} // namespace Sorting

@@ -32,7 +32,7 @@ int main() {
         // Ordena a lista
         auto timeStart = high_resolution_clock::now();
 
-        optimizedSelectionSort(head1); // Use outro algoritmo de ordenação, caso queira
+        Sorting::optimizedSelectionSort(head1); // Use outro algoritmo de ordenação, caso queira
 
         auto timeStop = high_resolution_clock::now();
 

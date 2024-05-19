@@ -4,74 +4,77 @@
 #include "../linkedList.h"
 #include "sorting.h"
 
-using std::cout;
-using std::cin;
-using std::string;
-using std::endl;
+using namespace std;
+using LinkedList::swapValue;
 
-void selectionSort(Node* head)
+namespace Sorting
 {
-    // Condição de lista vazia ou unitária
-    if (head == NULL || head->ptrNext == NULL)
+
+    void selectionSort(Node* head)
     {
-        cout << "It can't be ordened" << endl;
-        return;
-    }
-
-    // Criação de nós para controle dos loops
-    Node* outerLoop = head;
-    Node* innerLoop = NULL;
-
-    // Percurso até o fim da lista
-    while (outerLoop != NULL)
-    {
-        innerLoop = outerLoop->ptrNext;
-
-        while (innerLoop != NULL)
+        // Condição de lista vazia ou unitária
+        if (head == NULL || head->ptrNext == NULL)
         {
-        // Se algum nó for menor que o atual, atualizamos o atual
-        if (outerLoop->iValue > innerLoop->iValue) swapValue(outerLoop->iValue,innerLoop->iValue);
-        innerLoop = innerLoop->ptrNext;
+            cout << "It can't be ordened" << endl;
+            return;
         }
 
-        outerLoop = outerLoop->ptrNext;
-    }
-}
+        // Criação de nós para controle dos loops
+        Node* outerLoop = head;
+        Node* innerLoop = NULL;
 
-
-void optimizedSelectionSort(Node* head)
-{
-    // Condição de lista vazia ou unitária
-    if (head == NULL || head->ptrNext == NULL)
-    {
-        cout << "It can't be ordened" << endl;
-        return;
-    }
-
-    // Criação de nós para controle dos loops
-    Node* outerLoop = head;
-    Node* innerLoop = NULL;
-    
-    // Criação de nó pivô
-    Node* ptrPivot = head;
-
-    // Percurso até o fim da lista
-    while (outerLoop != NULL)
-    {
-        // Atualização dos paramêtros
-        innerLoop = outerLoop->ptrNext;
-        ptrPivot = outerLoop;
-
-        while (innerLoop != NULL)
+        // Percurso até o fim da lista
+        while (outerLoop != NULL)
         {
-        // Se algum nó for menor que o pivô, atualizamos o pivô
-        if (ptrPivot->iValue > innerLoop->iValue) ptrPivot = innerLoop;
-        innerLoop = innerLoop->ptrNext;
+            innerLoop = outerLoop->ptrNext;
+
+            while (innerLoop != NULL)
+            {
+            // Se algum nó for menor que o atual, atualizamos o atual
+            if (outerLoop->iValue > innerLoop->iValue) swapValue(outerLoop->iValue,innerLoop->iValue);
+            innerLoop = innerLoop->ptrNext;
+            }
+
+            outerLoop = outerLoop->ptrNext;
+        }
+    }
+
+
+    void optimizedSelectionSort(Node* head)
+    {
+        // Condição de lista vazia ou unitária
+        if (head == NULL || head->ptrNext == NULL)
+        {
+            cout << "It can't be ordened" << endl;
+            return;
         }
 
-        // Troca de valores
-        swapValue(ptrPivot->iValue,outerLoop->iValue);
+        // Criação de nós para controle dos loops
+        Node* outerLoop = head;
+        Node* innerLoop = NULL;
+        
+        // Criação de nó pivô
+        Node* ptrPivot = head;
 
-        outerLoop = outerLoop->ptrNext;
+        // Percurso até o fim da lista
+        while (outerLoop != NULL)
+        {
+            // Atualização dos paramêtros
+            innerLoop = outerLoop->ptrNext;
+            ptrPivot = outerLoop;
+
+            while (innerLoop != NULL)
+            {
+            // Se algum nó for menor que o pivô, atualizamos o pivô
+            if (ptrPivot->iValue > innerLoop->iValue) ptrPivot = innerLoop;
+            innerLoop = innerLoop->ptrNext;
+            }
+
+            // Troca de valores
+            swapValue(ptrPivot->iValue,outerLoop->iValue);
+
+            outerLoop = outerLoop->ptrNext;
+        }
     }
-}
+
+} // namespace Sorting
