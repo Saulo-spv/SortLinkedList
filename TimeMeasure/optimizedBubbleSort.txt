@@ -1,100 +1,100 @@
-271086689
-272820489
-277475688
-261578889
-266046289
-246997390
-253593989
-277184488
-254995490
-228582790
-224567791
-258273889
-231316890
-234641190
-252207290
-246052090
-234012990
-233153490
-225732391
-237126390
-238101790
-232495190
-231148791
-234442895
-233112096
-235278295
-228947095
-239726495
-238431696
-232453095
-228021795
-235495796
-226539995
-232125595
-232109296
-233033895
-232286895
-229894496
-231506895
-227808595
-235678395
-237913196
-241896995
-239508995
-241159895
-245607395
-239857295
-242088495
-241700395
-229798796
-240294995
-258064495
-231401295
-231082595
-226094296
-230526695
-229119303
-261791535
-232403631
-231069030
-233955531
-234397231
-253984133
-273674537
-275931436
-271484136
-269165836
-229730531
-229660730
-230165231
-229973930
-227291630
-230988931
-233950831
-227002830
-230437631
-229403330
-229495931
-232710831
-230235130
-233457431
-229592231
-236388331
-234702831
-233677530
-230092530
-231253931
-233075931
-230944930
-229117931
-229667042
-233169250
-230163049
-224244248
-228155149
-231521750
-229849050
-227620849
-228432649
-235248251
+Execution 1: 342363205 nanoseconds
+Execution 2: 348377706 nanoseconds
+Execution 3: 333804205 nanoseconds
+Execution 4: 349370205 nanoseconds
+Execution 5: 337843805 nanoseconds
+Execution 6: 346655606 nanoseconds
+Execution 7: 340527405 nanoseconds
+Execution 8: 350157705 nanoseconds
+Execution 9: 338382806 nanoseconds
+Execution 10: 351382805 nanoseconds
+Execution 11: 337534205 nanoseconds
+Execution 12: 350680106 nanoseconds
+Execution 13: 340684805 nanoseconds
+Execution 14: 344506101 nanoseconds
+Execution 15: 337617401 nanoseconds
+Execution 16: 349059701 nanoseconds
+Execution 17: 333448802 nanoseconds
+Execution 18: 343951101 nanoseconds
+Execution 19: 344573201 nanoseconds
+Execution 20: 347891702 nanoseconds
+Execution 21: 338239201 nanoseconds
+Execution 22: 348296701 nanoseconds
+Execution 23: 335202801 nanoseconds
+Execution 24: 347227602 nanoseconds
+Execution 25: 339738801 nanoseconds
+Execution 26: 365298701 nanoseconds
+Execution 27: 336397202 nanoseconds
+Execution 28: 357074101 nanoseconds
+Execution 29: 333392001 nanoseconds
+Execution 30: 358165802 nanoseconds
+Execution 31: 338748901 nanoseconds
+Execution 32: 346932401 nanoseconds
+Execution 33: 336386301 nanoseconds
+Execution 34: 343283402 nanoseconds
+Execution 35: 334741801 nanoseconds
+Execution 36: 344993501 nanoseconds
+Execution 37: 355978607 nanoseconds
+Execution 38: 356689707 nanoseconds
+Execution 39: 346962307 nanoseconds
+Execution 40: 358061308 nanoseconds
+Execution 41: 352311907 nanoseconds
+Execution 42: 345217907 nanoseconds
+Execution 43: 335853307 nanoseconds
+Execution 44: 341627208 nanoseconds
+Execution 45: 336563107 nanoseconds
+Execution 46: 345201207 nanoseconds
+Execution 47: 333400507 nanoseconds
+Execution 48: 349268207 nanoseconds
+Execution 49: 333269107 nanoseconds
+Execution 50: 345260707 nanoseconds
+Execution 51: 341901108 nanoseconds
+Execution 52: 354834007 nanoseconds
+Execution 53: 341116607 nanoseconds
+Execution 54: 342509507 nanoseconds
+Execution 55: 352475808 nanoseconds
+Execution 56: 343990007 nanoseconds
+Execution 57: 335171607 nanoseconds
+Execution 58: 343112707 nanoseconds
+Execution 59: 334989907 nanoseconds
+Execution 60: 341547813 nanoseconds
+Execution 61: 337784417 nanoseconds
+Execution 62: 343280316 nanoseconds
+Execution 63: 336296117 nanoseconds
+Execution 64: 345311117 nanoseconds
+Execution 65: 337354516 nanoseconds
+Execution 66: 344285716 nanoseconds
+Execution 67: 344320217 nanoseconds
+Execution 68: 346068517 nanoseconds
+Execution 69: 336174417 nanoseconds
+Execution 70: 345363317 nanoseconds
+Execution 71: 336824016 nanoseconds
+Execution 72: 344133917 nanoseconds
+Execution 73: 337409217 nanoseconds
+Execution 74: 343751717 nanoseconds
+Execution 75: 341569316 nanoseconds
+Execution 76: 344509017 nanoseconds
+Execution 77: 336709017 nanoseconds
+Execution 78: 346765117 nanoseconds
+Execution 79: 341802717 nanoseconds
+Execution 80: 344282017 nanoseconds
+Execution 81: 339343116 nanoseconds
+Execution 82: 347518417 nanoseconds
+Execution 83: 339935315 nanoseconds
+Execution 84: 346829208 nanoseconds
+Execution 85: 356799509 nanoseconds
+Execution 86: 343506508 nanoseconds
+Execution 87: 340462708 nanoseconds
+Execution 88: 344476808 nanoseconds
+Execution 89: 341603308 nanoseconds
+Execution 90: 344524608 nanoseconds
+Execution 91: 337112508 nanoseconds
+Execution 92: 347778008 nanoseconds
+Execution 93: 339614408 nanoseconds
+Execution 94: 345200408 nanoseconds
+Execution 95: 342990008 nanoseconds
+Execution 96: 344684209 nanoseconds
+Execution 97: 338253308 nanoseconds
+Execution 98: 346981108 nanoseconds
+Execution 99: 336707508 nanoseconds
+Execution 100: 353003608 nanoseconds
