@@ -1,5 +1,4 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
+#pragma once
 
 // Estrutura do Nó
 typedef struct Node
@@ -17,8 +16,7 @@ Node* searchNodebyValue(Node*, int);
 void insertAfter(Node*, int);
 void insertBefore(Node*, int);
 void deleteNode(Node**, Node*);
+void freeList(Node**);
 void deleteNodebyValue(Node**, int);
 void printList(Node*);
 void swapValue(int&, int&);
-
-#endif

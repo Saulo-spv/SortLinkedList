@@ -1,5 +1,4 @@
-#ifndef SORTING_H
-#define SORTING_H
+#pragma once
 
 // Selection Sort
 void selectionSort(Node*);
@@ -16,5 +15,3 @@ void insertionSort(Node*);
 bool isSorted(Node*);
 void shuffleList(Node*, int);
 void bogoSort(Node*);
-
-#endif

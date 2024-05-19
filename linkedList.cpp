@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-#include <chrono>
 
 #include "linkedList.h"
 #include "SortingAlgorithm/sorting.h"
@@ -178,6 +177,15 @@ void deleteNode(Node** head, Node* ptrDelete)
     if (ptrDelete->ptrPrev != NULL) ptrDelete->ptrPrev->ptrNext = ptrDelete->ptrNext;
     // Exclusão do nó
     free(ptrDelete);
+}
+
+void freeList(Node** head) 
+{
+    // Deeleta o primero nó até não sobrar nenhum
+    while (*head != nullptr) 
+    {
+        deleteNode(head, *head);
+    }
 }
 
 void deleteNodebyValue(Node** head, int iValue)
