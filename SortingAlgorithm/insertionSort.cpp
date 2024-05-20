@@ -7,7 +7,8 @@
 using namespace std;
 using LinkedList::swapValue;
 
-namespace Sorting {
+namespace Sorting
+{
 
     void insertionSort(Node* head) {
         // Condição de lista vazia ou unitária

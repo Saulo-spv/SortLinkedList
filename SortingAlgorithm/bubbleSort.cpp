@@ -7,7 +7,8 @@
 using namespace std;
 using LinkedList::swapValue;
 
-namespace Sorting {
+namespace Sorting
+{
 
     void bubbleSort(Node* head) {
 

@@ -25,14 +25,14 @@ int main() {
         head1 = nullptr;
 
         for (int c = 1; c <= 10000; c++) {
-            int iNum = rand();
+            int iNum = 1 + (rand() % 100);
             addElementFront(&head1, iNum);
         }
 
         // Ordena a lista
         auto timeStart = high_resolution_clock::now();
 
-        Sorting::optimizedSelectionSort(head1); // Use outro algoritmo de ordenação, caso queira
+        Sorting::optimizedBubbleSort(head1); // Use outro algoritmo de ordenação, caso queira
 
         auto timeStop = high_resolution_clock::now();
 

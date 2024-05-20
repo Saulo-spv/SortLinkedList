@@ -8,7 +8,8 @@
 using namespace std;
 using LinkedList::swapValue;
 
-namespace Sorting {
+namespace Sorting
+{
 
     // Função para verificar se a lista está ordenada
     bool isSorted(Node* head) {
