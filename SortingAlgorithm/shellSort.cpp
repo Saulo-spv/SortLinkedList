@@ -35,9 +35,6 @@ namespace Sorting
             temp = temp->ptrNext;
         }
 
-        cout << "Lista inicial:" << endl;
-        printList(head);
-
         Node* current;
         // Shell sort com sequência de gaps (n/2, n/4 ..., 1)
         for (int gap = iSize / 2; gap > 0; gap /= 2) {
@@ -53,9 +50,6 @@ namespace Sorting
                     temp = regresseK(current, gap); // Continua retrocedendo 'gap' posições
                 }
             }
-            // Imprime o estado da lista após cada gap
-            cout << "Lista após gap " << gap << ": " << endl;
-            printList(head);
         }
     }
 } // namespace Sorting
