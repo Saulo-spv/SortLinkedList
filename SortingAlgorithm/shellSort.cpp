@@ -20,6 +20,12 @@ namespace Sorting
     }
 
     void shellSort(Node* head) {
+        // Condição de lista vazia ou unitária
+        if(head == NULL || head->ptrNext == NULL) {
+            cout << "It can't be ordened" << endl;
+            return;
+        }
+
         int iSize = 0;
         Node* temp = head;
 
@@ -32,12 +38,13 @@ namespace Sorting
         cout << "Lista inicial:" << endl;
         printList(head);
 
+        Node* current;
         // Shell sort com sequência de gaps (n/2, n/4 ..., 1)
         for (int gap = iSize / 2; gap > 0; gap /= 2) {
             // Itera sobre os nós da lista para o gap atual
             for (Node* start = head; start != nullptr; start = start->ptrNext) {
-                Node* current = start;
-                Node* temp = regresseK(current, gap);
+                current = start;
+                temp = regresseK(current, gap);
                 
                 // Insertion Sort modificado para sublistas espaçadas pelo gap
                 while (temp != nullptr && temp->iValue > current->iValue) {
@@ -47,7 +54,7 @@ namespace Sorting
                 }
             }
             // Imprime o estado da lista após cada gap
-            cout << "Gap " << gap << ": ";
+            cout << "Lista após gap " << gap << ": " << endl;
             printList(head);
         }
     }

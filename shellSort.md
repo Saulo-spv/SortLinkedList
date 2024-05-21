@@ -2,7 +2,7 @@
 
 #### Descrição do Algoritmo
 
-O Shell Sort é um algoritmo de ordenação que generaliza o Insertion Sort para permitir a troca de elementos que estão distantes uns dos outros. O algoritmo utiliza uma sequência de gaps decrescentes para ordenar sublistas espaçadas pelo gap. Começa encontrando o comprimento da lista e utiliza a função `regresseK` para retroceder k posições na lista a partir de um nó dado. Durante a ordenação, funciona de maneira semelhante ao Insertion Sort, movendo os elementos maiores para a posição correta dentro de suas sublistas ordenadas. A cada iteração, o gap é reduzido até atingir 1, garantindo que a lista seja finalmente ordenada de forma crescente.
+O `Shell Sort` é um algoritmo de ordenação que generaliza o Insertion Sort para permitir a troca de elementos que estão distantes uns dos outros. O algoritmo utiliza uma sequência de gaps decrescentes para ordenar sublistas espaçadas pelo gap. Começa encontrando o comprimento da lista e utiliza a função `regresseK` para retroceder k posições na lista a partir de um nó dado. Durante a ordenação, funciona de maneira semelhante ao Insertion Sort, movendo os elementos maiores para a posição correta dentro de suas sublistas ordenadas. A cada iteração, o gap é reduzido até atingir 1, garantindo que a lista seja finalmente ordenada de forma crescente.
 
 #### Exemplo de Execução
 
@@ -34,7 +34,7 @@ Sublistas para Gap 2:
 [62, 67, 56, 59, 72], [54, 1, 78, 77, 92]
 
 Após ordenar sublistas:
-[56, 1, 59, 54, 62, 67, 72, 77, 78, 92]
+[56, 59, 62, 67, 72], [1, 54, 77, 78, 92]
 
 Lista após Gap 2:
 56, 1, 59, 54, 62, 77, 67, 78, 72, 92
@@ -55,4 +55,6 @@ O resultado final após aplicar o Shell Sort é uma lista ordenada:
 
 #### Desempenho
 
-Este exemplo demonstra como o Shell Sort utiliza gaps decrescentes para reorganizar a lista de maneira eficiente, resultando em uma lista ordenada após a última iteração com gap 1.
+Este exemplo demonstra como o `Shell Sort` utiliza gaps decrescentes para reorganizar a lista de maneira eficiente, resultando em uma lista ordenada após a última iteração com gap 1. Quando o gap é igual a um, o algoritmo se comporta como o `Insertion Sort`, mas com a vantagem de que os elementos já foram parcialmente ordenados nas passagens anteriores com gaps maiores.
+
+A pasta `TimeMeasure` contém os tempos de execução do algoritmo para ordenar 100 listas de 10 mil números cada. A sequência de gaps utilizada foi 156, 2 e 1, que se mostrou a mais eficiente após testar várias outras sequências. Acredito que essa eficiência se deve ao fato de estarmos trabalhando com listas duplamente encadeadas, onde a necessidade de percorrer a lista repetidamente torna sequências menores de gaps mais vantajosas.

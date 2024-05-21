@@ -17,14 +17,31 @@ using std::chrono::nanoseconds;
 int main() {
     Node* head1 = nullptr;
 
+    addElementFront(&head1, 92);
+    addElementFront(&head1, 1);
+    addElementFront(&head1, 67);
+    addElementFront(&head1, 54);
+    addElementFront(&head1, 62);
+    addElementFront(&head1, 56);
+    addElementFront(&head1, 72);
+    addElementFront(&head1, 77);
+    addElementFront(&head1, 59);
+    addElementFront(&head1, 78);   
+
+    Sorting::shellSort(head1); // Use outro algoritmo de ordenação, caso queira
+
+    // Libera a memória da lista
+    freeList(&head1); 
+
+/*
     // Inicializa a semente para a função rand()
     srand(time(nullptr));
 
-    for (int exec = 0; exec < 1; exec++) {
+    for (int exec = 0; exec < 100; exec++) {
         // Criação do cabeçalho da lista
         head1 = nullptr;
 
-        for (int c = 1; c <= 10; c++) {
+        for (int c = 1; c <= 10000; c++) {
             int iNum = 1 + (rand() % 100);
             addElementFront(&head1, iNum);
         }
@@ -42,6 +59,8 @@ int main() {
         // Libera a memória da lista
         freeList(&head1);
     }
+*/
+
 
     return 0;
 }
