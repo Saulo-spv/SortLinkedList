@@ -218,9 +218,10 @@ namespace LinkedList
             while (current != NULL)
             {
                 // Impressão dos valores dos nós
-                cout << current->iValue << " " << endl;
+                cout << current->iValue << "  ";
                 current = current->ptrNext;
             } 
+            cout << endl;
         }
     }
 
