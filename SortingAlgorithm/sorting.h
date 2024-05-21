@@ -21,4 +21,8 @@ namespace Sorting
     void shuffleList(Node*, int);
     void bogoSort(Node*);
 
+    // Shell Sort
+    void shellSort(Node*);
+    Node* regresseK(Node*, int);
+
 } // namespace Sorting
