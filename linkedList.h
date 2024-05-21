@@ -2,25 +2,47 @@
 
 namespace LinkedList
 {
-    // Estrutura do Nó
-    typedef struct Node
-    {
-        int iValue;
+
+    // Estrutura do Nó como template
+    template <typename T>
+    struct Node {
+        T Value;
         Node* ptrNext;
         Node* ptrPrev;
-    } Node;
+    };
 
-    // Linked List
-    Node* newNode(int);
-    void addElementEnd(Node**, int);
-    void addElementFront(Node**, int);
-    Node* searchNodebyValue(Node*, int);
-    void insertAfter(Node*, int);
-    void insertBefore(Node*, int);
-    void deleteNode(Node**, Node*);
-    void freeList(Node**);
-    void deleteNodebyValue(Node**, int);
-    void printList(Node*);
-    void swapValue(int&, int&);
+    // Funções para Linked List
+    template <typename T>
+    Node<T>* newNode(T);
+
+    template <typename T>
+    void addElementEnd(Node<T>**, T);
+
+    template <typename T>
+    void addElementFront(Node<T>**, T);
+
+    template <typename T>
+    Node<T>* searchNodebyValue(Node<T>*, T);
+
+    template <typename T>
+    void insertAfter(Node<T>*, T);
+
+    template <typename T>
+    void insertBefore(Node<T>*, T);
+
+    template <typename T>
+    void deleteNode(Node<T>**, Node<T>*);
+
+    template <typename T>
+    void freeList(Node<T>**);
+
+    template <typename T>
+    void deleteNodebyValue(Node<T>**, T);
+
+    template <typename T>
+    void printList(Node<T>*);
+
+    template <typename T>
+    void swapValue(T&, T&);
 
 } // namespace LinkedList

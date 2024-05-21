@@ -31,7 +31,7 @@ cd SortLinkedList
 
 3. Compile os arquivos em um executável:
 ```bash
-c++ main.cpp linkedList.cpp SortingAlgorithm/bubbleSort.cpp SortingAlgorithm/selectionSort.cpp SortingAlgorithm/insertionSort.cpp SortingAlgorithm/bogoSort.cpp -o main
+c++ main.cpp linkedList.cpp SortingAlgorithm/bubbleSort.cpp SortingAlgorithm/selectionSort.cpp SortingAlgorithm/insertionSort.cpp SortingAlgorithm/bogoSort.cpp SortingAlgorithm/shellSort.cpp -o main
 ```
 
 4. Execute o código:

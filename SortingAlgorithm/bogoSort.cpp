@@ -12,10 +12,11 @@ namespace Sorting
 {
 
     // Função para verificar se a lista está ordenada
-    bool isSorted(Node* head) {
-        Node* current = head;
+    template <typename T>
+    bool isSorted(Node<T>* head) {
+        Node<T>* current = head;
         while (current->ptrNext != nullptr) {
-            if (current->iValue > current->ptrNext->iValue)
+            if (current->Value > current->ptrNext->Value)
                 return false;
             current = current->ptrNext;
         }
@@ -23,10 +24,11 @@ namespace Sorting
     }
 
     // Função de embaralhamento
-    void shuffleList(Node* head, int size) {
+    template <typename T>
+    void shuffleList(Node<T>* head, int size) {
 
-        Node* current = head;
-        Node* nodeSwap = nullptr;
+        Node<T>* current = head;
+        Node<T>* nodeSwap = nullptr;
 
         // Embaralhamento dos elementos
         for (int c = 0; c < size; c++) {
@@ -39,18 +41,19 @@ namespace Sorting
             }
 
             // Troca os valores dos nós
-            swapValue(current->iValue, nodeSwap->iValue);
+            swapValue(current->Value, nodeSwap->Value);
 
             current = current->ptrNext;
         }
     }
 
     // Função Bogo Sort
-    void bogoSort(Node* head) {
+    template <typename T>
+    void bogoSort(Node<T>* head) {
         // Inicializa a semente para a função rand()
         srand(time(nullptr));
 
-        Node* current = head;
+        Node<T>* current = head;
         int size = 0;
         // Calcula o tamanho da lista
         while (current != nullptr) {
@@ -63,5 +66,20 @@ namespace Sorting
             shuffleList(head, size);
         }
     }
+
+    // Instanciação explícita para os tipos inteiros
+    template bool isSorted<int>(LinkedList::Node<int>*);
+    template void shuffleList<int>(Node<int>*, int);
+    template void bogoSort<int>(Node<int>*);
+
+    // Instanciação explícita para os tipos float
+    template bool isSorted<float>(LinkedList::Node<float>*);
+    template void shuffleList<float>(Node<float>*, int);
+    template void bogoSort<float>(Node<float>*);
+
+    // Instanciação explícita para os tipos char
+    template void shuffleList<char>(Node<char>*, int);
+    template bool isSorted<char>(LinkedList::Node<char>*);
+    template void bogoSort<char>(Node<char>*);
 
 } // namespace Sorting

@@ -8,7 +8,8 @@ using namespace LinkedList;
 namespace Sorting
 {
     // Função auxiliar para retroceder k posições em uma lista duplamente encadeada a partir de um nó dado.
-    Node* regresseK(Node* node, int gap) {
+    template <typename T>
+    Node<T>* regresseK(Node<T>* node, int gap) {
         for (int c = 0; c < gap; c++) {
             if (node->ptrPrev != nullptr) {
                 node = node->ptrPrev;
@@ -19,7 +20,8 @@ namespace Sorting
         return node;
     }
 
-    void shellSort(Node* head) {
+    template <typename T>
+    void shellSort(Node<T>* head) {
         // Condição de lista vazia ou unitária
         if(head == NULL || head->ptrNext == NULL) {
             cout << "It can't be ordened" << endl;
@@ -27,7 +29,7 @@ namespace Sorting
         }
 
         int iSize = 0;
-        Node* temp = head;
+        Node<T>* temp = head;
 
         // Encontra o comprimento da lista
         while (temp != nullptr) {
@@ -35,21 +37,34 @@ namespace Sorting
             temp = temp->ptrNext;
         }
 
-        Node* current;
-        // Shell sort com sequência de gaps (n/2, n/4 ..., 1)
+        Node<T>* current;
+        // Mude para a sequência de gap desejada
         for (int gap = iSize / 2; gap > 0; gap /= 2) {
             // Itera sobre os nós da lista para o gap atual
-            for (Node* start = head; start != nullptr; start = start->ptrNext) {
+            for (Node<T>* start = head; start != nullptr; start = start->ptrNext) {
                 current = start;
                 temp = regresseK(current, gap);
                 
                 // Insertion Sort modificado para sublistas espaçadas pelo gap
-                while (temp != nullptr && temp->iValue > current->iValue) {
-                    swapValue(temp->iValue, current->iValue);
+                while (temp != nullptr && temp->Value > current->Value) {
+                    swapValue(temp->Value, current->Value);
                     current = temp;
                     temp = regresseK(current, gap); // Continua retrocedendo 'gap' posições
                 }
             }
         }
     }
+
+    // Instanciação explícita para os tipos inteiros
+    template Node<int>* regresseK<int>(Node<int>*, int);
+    template void shellSort<int>(Node<int>*);
+
+    // Instanciação explícita para os tipos float
+    template Node<float>* regresseK<float>(Node<float>*, int);
+    template void shellSort<float>(Node<float>*);
+    
+    // Instanciação explícita para os tipos char
+    template Node<char>* regresseK<char>(Node<char>*, int);
+    template void shellSort<char>(Node<char>*);
+
 } // namespace Sorting

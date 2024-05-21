@@ -15,20 +15,22 @@ using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
 
 int main() {
-    Node* head1 = nullptr;
+    Node<float>* head1 = nullptr;
 
-    addElementFront(&head1, 92);
-    addElementFront(&head1, 1);
-    addElementFront(&head1, 67);
-    addElementFront(&head1, 54);
-    addElementFront(&head1, 62);
-    addElementFront(&head1, 56);
-    addElementFront(&head1, 72);
-    addElementFront(&head1, 77);
-    addElementFront(&head1, 59);
-    addElementFront(&head1, 78);   
+    addElementFront(&head1, 92.55f);
+    addElementFront(&head1, 1.69f);
+    addElementFront(&head1, 67.69f);
+    addElementFront(&head1, 54.0f);
+    addElementFront(&head1, 62.0f);
+    addElementFront(&head1, 56.9f);
+    addElementFront(&head1, 72.0f);
+    addElementFront(&head1, 77.77f);
+    addElementFront(&head1, 59.003f);
+    addElementFront(&head1, 78.0f);   
 
     Sorting::shellSort(head1); // Use outro algoritmo de ordenação, caso queira
+
+    printList(head1);
 
     // Libera a memória da lista
     freeList(&head1); 

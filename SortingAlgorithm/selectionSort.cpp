@@ -10,7 +10,8 @@ using LinkedList::swapValue;
 namespace Sorting
 {
 
-    void selectionSort(Node* head)
+    template <typename T>
+    void selectionSort(Node<T>* head)
     {
         // Condição de lista vazia ou unitária
         if (head == NULL || head->ptrNext == NULL)
@@ -20,8 +21,8 @@ namespace Sorting
         }
 
         // Criação de nós para controle dos loops
-        Node* outerLoop = head;
-        Node* innerLoop = NULL;
+        Node<T>* outerLoop = head;
+        Node<T>* innerLoop = NULL;
 
         // Percurso até o fim da lista
         while (outerLoop != NULL)
@@ -31,7 +32,7 @@ namespace Sorting
             while (innerLoop != NULL)
             {
             // Se algum nó for menor que o atual, atualizamos o atual
-            if (outerLoop->iValue > innerLoop->iValue) swapValue(outerLoop->iValue,innerLoop->iValue);
+            if (outerLoop->Value > innerLoop->Value) swapValue(outerLoop->Value,innerLoop->Value);
             innerLoop = innerLoop->ptrNext;
             }
 
@@ -39,8 +40,8 @@ namespace Sorting
         }
     }
 
-
-    void optimizedSelectionSort(Node* head)
+    template <typename T>
+    void optimizedSelectionSort(Node<T>* head)
     {
         // Condição de lista vazia ou unitária
         if (head == NULL || head->ptrNext == NULL)
@@ -50,11 +51,11 @@ namespace Sorting
         }
 
         // Criação de nós para controle dos loops
-        Node* outerLoop = head;
-        Node* innerLoop = NULL;
+        Node<T>* outerLoop = head;
+        Node<T>* innerLoop = NULL;
         
         // Criação de nó pivô
-        Node* ptrPivot = head;
+        Node<T>* ptrPivot = head;
 
         // Percurso até o fim da lista
         while (outerLoop != NULL)
@@ -66,15 +67,26 @@ namespace Sorting
             while (innerLoop != NULL)
             {
             // Se algum nó for menor que o pivô, atualizamos o pivô
-            if (ptrPivot->iValue > innerLoop->iValue) ptrPivot = innerLoop;
+            if (ptrPivot->Value > innerLoop->Value) ptrPivot = innerLoop;
             innerLoop = innerLoop->ptrNext;
             }
 
             // Troca de valores
-            swapValue(ptrPivot->iValue,outerLoop->iValue);
+            swapValue(ptrPivot->Value,outerLoop->Value);
 
             outerLoop = outerLoop->ptrNext;
         }
     }
+
+    // Instanciação explícita para os tipos inteiros
+    template void selectionSort<int>(LinkedList::Node<int>*);
+    template void optimizedSelectionSort<int>(LinkedList::Node<int>*);
+
+    // Instanciação explícita para os tipos float
+    template void optimizedSelectionSort<float>(LinkedList::Node<float>*);
+
+    // Instanciação explícita para os tipos char
+    template void selectionSort<char>(LinkedList::Node<char>*);
+    template void optimizedSelectionSort<char>(LinkedList::Node<char>*);
 
 } // namespace Sorting

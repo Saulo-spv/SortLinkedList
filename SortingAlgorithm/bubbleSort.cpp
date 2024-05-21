@@ -9,8 +9,8 @@ using LinkedList::swapValue;
 
 namespace Sorting
 {
-
-    void bubbleSort(Node* head) {
+    template <typename T>
+    void bubbleSort(Node<T>* head) {
 
         // Condição de lista vazia ou unitária
         if(head == NULL || head->ptrNext == NULL) {
@@ -18,16 +18,16 @@ namespace Sorting
             return;
         }
 
-        Node* currentOuter = head; // Ponteiro para percorrer a lista externamente
-        Node* currentInner = NULL; // Ponteiro para percorrer a lista internamente
+        Node<T>* currentOuter = head; // Ponteiro para percorrer a lista externamente
+        Node<T>* currentInner = NULL; // Ponteiro para percorrer a lista internamente
 
         // Percorre a lista com dois loops
         while(currentOuter->ptrNext != NULL){
             currentInner = head;
             while(currentInner->ptrNext != NULL){
                 // Compara e troca os elementos se necessário
-                if(currentInner->iValue > currentInner->ptrNext->iValue){
-                    swapValue(currentInner->iValue, currentInner->ptrNext->iValue);
+                if(currentInner->Value > currentInner->ptrNext->Value){
+                    swapValue(currentInner->Value, currentInner->ptrNext->Value);
                 }
                 currentInner = currentInner->ptrNext;
             }
@@ -35,7 +35,8 @@ namespace Sorting
         }
     }
 
-    void optimizedBubbleSort(Node* head) {
+    template <typename T>
+    void optimizedBubbleSort(Node<T>* head) {
 
         // Condição de lista vazia ou unitária
         if(head == NULL || head->ptrNext == NULL) {
@@ -44,12 +45,12 @@ namespace Sorting
         }
 
         // Inicializa o ponteiro 'last' e o coloca no final da lista
-        Node* last = head;
+        Node<T>* last = head;
         while(last->ptrNext != NULL) {
             last = last->ptrNext;
         }
 
-        Node* current = NULL;
+        Node<T>* current = NULL;
 
         // Inicializa um flag que indica se ouve trocas naquela iteração
         bool swapped = true;
@@ -62,8 +63,8 @@ namespace Sorting
             // Percorre a lista e compara elementos adjacentes
             while(current != last){
                 // Se o valor atual for maior que o próximo, troca os valores
-                if(current->iValue > current->ptrNext->iValue){
-                    swapValue(current->iValue, current->ptrNext->iValue);
+                if(current->Value > current->ptrNext->Value){
+                    swapValue(current->Value, current->ptrNext->Value);
                     // Define 'swapped' como verdadeiro, indicando que houve uma troca
                     swapped = true;
                 }
@@ -73,5 +74,17 @@ namespace Sorting
             last = last->ptrPrev;
         }
     }
+
+    // Instanciação explícita para os tipos inteiros
+    template void bubbleSort<int>(LinkedList::Node<int>*);
+    template void optimizedBubbleSort<int>(LinkedList::Node<int>*);
+
+    // Instanciação explícita para os tipos float
+    template void bubbleSort<float>(LinkedList::Node<float>*);
+    template void optimizedBubbleSort<float>(LinkedList::Node<float>*);
+    
+    // Instanciação explícita para os tipos char
+    template void bubbleSort<char>(LinkedList::Node<char>*);
+    template void optimizedBubbleSort<char>(LinkedList::Node<char>*);
 
 } // namespace Sorting
