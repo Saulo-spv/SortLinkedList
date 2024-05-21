@@ -20,11 +20,11 @@ int main() {
     // Inicializa a semente para a função rand()
     srand(time(nullptr));
 
-    for (int exec = 0; exec < 100; exec++) {
+    for (int exec = 0; exec < 1; exec++) {
         // Criação do cabeçalho da lista
         head1 = nullptr;
 
-        for (int c = 1; c <= 10000; c++) {
+        for (int c = 1; c <= 10; c++) {
             int iNum = 1 + (rand() % 100);
             addElementFront(&head1, iNum);
         }
@@ -32,7 +32,7 @@ int main() {
         // Ordena a lista
         auto timeStart = high_resolution_clock::now();
 
-        Sorting::optimizedBubbleSort(head1); // Use outro algoritmo de ordenação, caso queira
+        Sorting::shellSort(head1); // Use outro algoritmo de ordenação, caso queira
 
         auto timeStop = high_resolution_clock::now();
 
