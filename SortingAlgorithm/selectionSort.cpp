@@ -83,6 +83,7 @@ namespace Sorting
     template void optimizedSelectionSort<int>(LinkedList::Node<int>*);
 
     // Instanciação explícita para os tipos float
+    template void selectionSort<float>(LinkedList::Node<float>*);
     template void optimizedSelectionSort<float>(LinkedList::Node<float>*);
 
     // Instanciação explícita para os tipos char
