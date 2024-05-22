@@ -33,12 +33,12 @@ namespace Sorting
     }
 
     // Instanciação explícita para os tipos inteiros
-    template void insertionSort<int>(LinkedList::Node<int>*);
+    template void insertionSort(LinkedList::Node<int>*);
 
     // Instanciação explícita para os tipos float
-    template void insertionSort<float>(LinkedList::Node<float>*);
+    template void insertionSort(LinkedList::Node<float>*);
 
     // Instanciação explícita para os tipos char
-    template void insertionSort<char>(LinkedList::Node<char>*);
+    template void insertionSort(LinkedList::Node<char>*);
 
 } // namespace Sorting

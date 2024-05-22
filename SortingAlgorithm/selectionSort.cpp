@@ -79,15 +79,15 @@ namespace Sorting
     }
 
     // Instanciação explícita para os tipos inteiros
-    template void selectionSort<int>(LinkedList::Node<int>*);
-    template void optimizedSelectionSort<int>(LinkedList::Node<int>*);
+    template void selectionSort(LinkedList::Node<int>*);
+    template void optimizedSelectionSort(LinkedList::Node<int>*);
 
     // Instanciação explícita para os tipos float
-    template void selectionSort<float>(LinkedList::Node<float>*);
-    template void optimizedSelectionSort<float>(LinkedList::Node<float>*);
+    template void selectionSort(LinkedList::Node<float>*);
+    template void optimizedSelectionSort(LinkedList::Node<float>*);
 
     // Instanciação explícita para os tipos char
-    template void selectionSort<char>(LinkedList::Node<char>*);
-    template void optimizedSelectionSort<char>(LinkedList::Node<char>*);
+    template void selectionSort(LinkedList::Node<char>*);
+    template void optimizedSelectionSort(LinkedList::Node<char>*);
 
 } // namespace Sorting

@@ -68,18 +68,18 @@ namespace Sorting
     }
 
     // Instanciação explícita para os tipos inteiros
-    template bool isSorted<int>(LinkedList::Node<int>*);
-    template void shuffleList<int>(Node<int>*, int);
-    template void bogoSort<int>(Node<int>*);
+    template bool isSorted(LinkedList::Node<int>*);
+    template void shuffleList(Node<int>*, int);
+    template void bogoSort(Node<int>*);
 
     // Instanciação explícita para os tipos float
-    template bool isSorted<float>(LinkedList::Node<float>*);
-    template void shuffleList<float>(Node<float>*, int);
-    template void bogoSort<float>(Node<float>*);
+    template bool isSorted(LinkedList::Node<float>*);
+    template void shuffleList(Node<float>*, int);
+    template void bogoSort(Node<float>*);
 
     // Instanciação explícita para os tipos char
-    template void shuffleList<char>(Node<char>*, int);
-    template bool isSorted<char>(LinkedList::Node<char>*);
-    template void bogoSort<char>(Node<char>*);
+    template void shuffleList(Node<char>*, int);
+    template bool isSorted(LinkedList::Node<char>*);
+    template void bogoSort(Node<char>*);
 
 } // namespace Sorting

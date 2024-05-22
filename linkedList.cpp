@@ -242,42 +242,42 @@ namespace LinkedList
     }
 
     // Instanciação explícita para os tipos inteiros
-    template Node<int>* newNode<int>(int);
-    template void addElementEnd<int>(Node<int>**, int);
-    template void addElementFront<int>(Node<int>**, int);
-    template Node<int>* searchNodebyValue<int>(Node<int>*, int);
-    template void insertAfter<int>(Node<int>*, int);
-    template void insertBefore<int>(Node<int>*, int);
-    template void deleteNode<int>(Node<int>**, Node<int>*);
-    template void freeList<int>(Node<int>**);
-    template void deleteNodebyValue<int>(Node<int>**, int);
-    template void printList<int>(Node<int>*);
-    template void swapValue<int>(int&, int&);
+    template Node<int>* newNode(int);
+    template void addElementEnd(Node<int>**, int);
+    template void addElementFront(Node<int>**, int);
+    template Node<int>* searchNodebyValue(Node<int>*, int);
+    template void insertAfter(Node<int>*, int);
+    template void insertBefore(Node<int>*, int);
+    template void deleteNode(Node<int>**, Node<int>*);
+    template void freeList(Node<int>**);
+    template void deleteNodebyValue(Node<int>**, int);
+    template void printList(Node<int>*);
+    template void swapValue(int&, int&);
 
     // Instanciação explícita para os tipos float
-    template Node<float>* newNode<float>(float);
-    template void addElementEnd<float>(Node<float>**, float);
-    template void addElementFront<float>(Node<float>**, float);
-    template Node<float>* searchNodebyValue<float>(Node<float>*, float);
-    template void insertAfter<float>(Node<float>*, float);
-    template void insertBefore<float>(Node<float>*, float);
-    template void deleteNode<float>(Node<float>**, Node<float>*);
-    template void freeList<float>(Node<float>**);
-    template void deleteNodebyValue<float>(Node<float>**, float);
-    template void printList<float>(Node<float>*);
-    template void swapValue<float>(float&, float&);
+    template Node<float>* newNode(float);
+    template void addElementEnd(Node<float>**, float);
+    template void addElementFront(Node<float>**, float);
+    template Node<float>* searchNodebyValue(Node<float>*, float);
+    template void insertAfter(Node<float>*, float);
+    template void insertBefore(Node<float>*, float);
+    template void deleteNode(Node<float>**, Node<float>*);
+    template void freeList(Node<float>**);
+    template void deleteNodebyValue(Node<float>**, float);
+    template void printList(Node<float>*);
+    template void swapValue(float&, float&);
 
     // Instanciação explícita para os tipos char
-    template Node<char>* newNode<char>(char);
-    template void addElementEnd<char>(Node<char>**, char);
-    template void addElementFront<char>(Node<char>**, char);
-    template Node<char>* searchNodebyValue<char>(Node<char>*, char);
-    template void insertAfter<char>(Node<char>*, char);
-    template void insertBefore<char>(Node<char>*, char);
-    template void deleteNode<char>(Node<char>**, Node<char>*);
-    template void freeList<char>(Node<char>**);
-    template void deleteNodebyValue<char>(Node<char>**, char);
-    template void printList<char>(Node<char>*);
-    template void swapValue<char>(char&, char&);
+    template Node<char>* newNode(char);
+    template void addElementEnd(Node<char>**, char);
+    template void addElementFront(Node<char>**, char);
+    template Node<char>* searchNodebyValue(Node<char>*, char);
+    template void insertAfter(Node<char>*, char);
+    template void insertBefore(Node<char>*, char);
+    template void deleteNode(Node<char>**, Node<char>*);
+    template void freeList(Node<char>**);
+    template void deleteNodebyValue(Node<char>**, char);
+    template void printList(Node<char>*);
+    template void swapValue(char&, char&);
 
 } // namespace LinkedList

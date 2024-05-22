@@ -76,15 +76,15 @@ namespace Sorting
     }
 
     // Instanciação explícita para os tipos inteiros
-    template void bubbleSort<int>(LinkedList::Node<int>*);
-    template void optimizedBubbleSort<int>(LinkedList::Node<int>*);
+    template void bubbleSort(LinkedList::Node<int>*);
+    template void optimizedBubbleSort(LinkedList::Node<int>*);
 
     // Instanciação explícita para os tipos float
-    template void bubbleSort<float>(LinkedList::Node<float>*);
-    template void optimizedBubbleSort<float>(LinkedList::Node<float>*);
+    template void bubbleSort(LinkedList::Node<float>*);
+    template void optimizedBubbleSort(LinkedList::Node<float>*);
     
     // Instanciação explícita para os tipos char
-    template void bubbleSort<char>(LinkedList::Node<char>*);
-    template void optimizedBubbleSort<char>(LinkedList::Node<char>*);
+    template void bubbleSort(LinkedList::Node<char>*);
+    template void optimizedBubbleSort(LinkedList::Node<char>*);
 
 } // namespace Sorting

@@ -56,15 +56,15 @@ namespace Sorting
     }
 
     // Instanciação explícita para os tipos inteiros
-    template Node<int>* regresseK<int>(Node<int>*, int);
-    template void shellSort<int>(Node<int>*);
+    template Node<int>* regresseK(Node<int>*, int);
+    template void shellSort(Node<int>*);
 
     // Instanciação explícita para os tipos float
-    template Node<float>* regresseK<float>(Node<float>*, int);
-    template void shellSort<float>(Node<float>*);
+    template Node<float>* regresseK(Node<float>*, int);
+    template void shellSort(Node<float>*);
     
     // Instanciação explícita para os tipos char
-    template Node<char>* regresseK<char>(Node<char>*, int);
-    template void shellSort<char>(Node<char>*);
+    template Node<char>* regresseK(Node<char>*, int);
+    template void shellSort(Node<char>*);
 
 } // namespace Sorting
