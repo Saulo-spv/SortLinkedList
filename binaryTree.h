@@ -42,6 +42,9 @@ namespace BinaryTree
     void bfsTraversal(Node<T>*);
 
     template <typename T>
+    Node<T>* bfsSearchNode(Node<T>*, T);
+
+    template <typename T>
     int treeHeight(Node<T>* startNode);
 
 } // namespace BinaryTree

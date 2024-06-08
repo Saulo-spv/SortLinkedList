@@ -58,6 +58,37 @@ namespace BinaryTree
     }
 
     template <typename T>
+    Node<T>* bfsSearchNode(Node<T>* startNode, T value) {
+        if (startNode == nullptr) return nullptr;
+
+        // Inicialização da lista de preferência
+        LinkedList::Node<Node<T>*>* head = nullptr;
+        LinkedList::addElementEnd(&head, startNode);
+
+        while (head != nullptr) {
+            if (head->Value->Value == value) {
+                Node<T>* result = head->Value;
+                while (head != nullptr) {
+                    LinkedList::deleteNode(&head, head);
+                }
+                return result;
+            }
+
+            if (head->Value->ptrLeft != nullptr) {
+                LinkedList::addElementEnd(&head, head->Value->ptrLeft);
+            }
+
+            if (head->Value->ptrRight != nullptr) {
+                LinkedList::addElementEnd(&head, head->Value->ptrRight);
+            }
+
+            LinkedList::deleteNode(&head, head);
+        }
+
+        return nullptr; // Valor não encontrado
+    }
+
+    template <typename T>
     Node<T>* lesserLeaf(Node<T>* startNode)
     {
         Node<T>* ptrCurrent = startNode;
@@ -192,5 +223,6 @@ namespace BinaryTree
     template void traversePostOrder(Node<int>*);
     template void bfsTraversal(Node<int>*);
     template int treeHeight(Node<int>*);
+    template Node<int>* bfsSearchNode(Node<int>*, int);
 
 } // namespace BinaryTree

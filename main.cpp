@@ -77,6 +77,23 @@ int main() {
 
     cout << "\nTree size: " << treeHeight(root) << endl;
 
+    int searchValue = 666;
+    BinaryTree::Node<int>* searchResult = bfsSearchNode(root, searchValue);
+
+    if (searchResult != nullptr) {
+        cout << "\nValue " << searchValue << " found in the tree." << endl;
+    } else {
+        cout << "\nValue " << searchValue << " not found in the tree." << endl;
+    }
+
+    searchValue = 100;
+    searchResult = bfsSearchNode(root, searchValue);
+
+    if (searchResult != nullptr) {
+        cout << "\nValue " << searchValue << " found in the tree." << endl;
+    } else {
+        cout << "\nValue " << searchValue << " not found in the tree." << endl;
+    }
 
     return 0;
 }
