@@ -3,6 +3,7 @@
 
 #include "linkedList.h"
 #include "SortingAlgorithm/sorting.h"
+#include "binaryTree.h"
 
 using namespace std;
 
@@ -279,5 +280,20 @@ namespace LinkedList
     template void deleteNodebyValue(Node<char>**, char);
     template void printList(Node<char>*);
     template void swapValue(char&, char&);
+
+    // Instanciação explícita para os tipos BinaryTree::Node<int>*
+    template Node<BinaryTree::Node<int>*>* newNode(BinaryTree::Node<int>*);
+    template void addElementEnd(Node<BinaryTree::Node<int>*>**, BinaryTree::Node<int>*);
+    template void deleteNode(Node<BinaryTree::Node<int>*>**, Node<BinaryTree::Node<int>*>*);
+
+    // Instanciação explícita para os tipos BinaryTree::Node<float>*
+    template Node<BinaryTree::Node<float>*>* newNode(BinaryTree::Node<float>*);
+    template void addElementEnd(Node<BinaryTree::Node<float>*>**, BinaryTree::Node<float>*);
+    template void deleteNode(Node<BinaryTree::Node<float>*>**, Node<BinaryTree::Node<float>*>*);
+
+    // Instanciação explícita para os tipos BinaryTree::Node<char>*
+    template Node<BinaryTree::Node<char>*>* newNode(BinaryTree::Node<char>*);
+    template void addElementEnd(Node<BinaryTree::Node<char>*>**, BinaryTree::Node<char>*);
+    template void deleteNode(Node<BinaryTree::Node<char>*>**, Node<BinaryTree::Node<char>*>*);
 
 } // namespace LinkedList

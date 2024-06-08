@@ -4,6 +4,7 @@
 
 #include "linkedList.h"
 #include "SortingAlgorithm/sorting.h"
+#include "binaryTree.h"
 
 using std::cout;
 using std::cin;
@@ -15,6 +16,7 @@ using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
 
 int main() {
+/*
     Node<float>* head1 = nullptr;
 
     addElementFront(&head1, 92.55f);
@@ -33,7 +35,8 @@ int main() {
     printList(head1);
 
     // Libera a memória da lista
-    freeList(&head1); 
+    freeList(&head1);
+*/
 
 /*
     // Inicializa a semente para a função rand()
@@ -62,6 +65,17 @@ int main() {
         freeList(&head1);
     }
 */
+
+    BinaryTree::Node<int>* root = nullptr;
+    root = insertNode(root, 42);
+    root = insertNode(root, 7);
+    root = insertNode(root, 666);
+    root = insertNode(root, 1);
+    root = insertNode(root, 13);
+
+    BinaryTree::bfsTraversal(root);
+
+    cout << "\nTree size: " << treeHeight(root) << endl;
 
 
     return 0;
