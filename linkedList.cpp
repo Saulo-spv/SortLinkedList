@@ -242,6 +242,29 @@ namespace LinkedList
         irefValue2 = temp;
     }
 
+    template <typename T>
+    void shuffleList(Node<T>* head, int size) {
+
+        Node<T>* current = head;
+        Node<T>* nodeSwap = nullptr;
+
+        // Embaralhamento dos elementos
+        for (int c = 0; c < size; c++) {
+            // Gera um índice aleatório j entre 0 e size - c
+            int j = rand() % (size - c);
+
+            nodeSwap = current;
+            for(int k = 1; k <= j; k++){
+                nodeSwap = nodeSwap->ptrNext;
+            }
+
+            // Troca os valores dos nós
+            swapValue(current->Value, nodeSwap->Value);
+
+            current = current->ptrNext;
+        }
+    }
+
     // Instanciação explícita para os tipos inteiros
     template Node<int>* newNode(int);
     template void addElementEnd(Node<int>**, int);
@@ -254,6 +277,7 @@ namespace LinkedList
     template void deleteNodebyValue(Node<int>**, int);
     template void printList(Node<int>*);
     template void swapValue(int&, int&);
+    template void shuffleList(Node<int>*, int);
 
     // Instanciação explícita para os tipos float
     template Node<float>* newNode(float);
@@ -267,6 +291,7 @@ namespace LinkedList
     template void deleteNodebyValue(Node<float>**, float);
     template void printList(Node<float>*);
     template void swapValue(float&, float&);
+    template void shuffleList(Node<float>*, int);
 
     // Instanciação explícita para os tipos char
     template Node<char>* newNode(char);
@@ -280,6 +305,7 @@ namespace LinkedList
     template void deleteNodebyValue(Node<char>**, char);
     template void printList(Node<char>*);
     template void swapValue(char&, char&);
+    template void shuffleList(Node<char>*, int);
 
     // Instanciação explícita para os tipos BinaryTree::Node<int>*
     template Node<BinaryTree::Node<int>*>* newNode(BinaryTree::Node<int>*);

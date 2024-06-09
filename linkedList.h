@@ -45,4 +45,7 @@ namespace LinkedList
     template <typename T>
     void swapValue(T&, T&);
 
+    template <typename T>
+    void shuffleList(Node<T>*, int);
+
 } // namespace LinkedList

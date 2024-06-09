@@ -23,30 +23,6 @@ namespace Sorting
         return true;
     }
 
-    // Função de embaralhamento
-    template <typename T>
-    void shuffleList(Node<T>* head, int size) {
-
-        Node<T>* current = head;
-        Node<T>* nodeSwap = nullptr;
-
-        // Embaralhamento dos elementos
-        for (int c = 0; c < size; c++) {
-            // Gera um índice aleatório j entre 0 e size - c
-            int j = rand() % (size - c);
-
-            nodeSwap = current;
-            for(int k = 1; k <= j; k++){
-                nodeSwap = nodeSwap->ptrNext;
-            }
-
-            // Troca os valores dos nós
-            swapValue(current->Value, nodeSwap->Value);
-
-            current = current->ptrNext;
-        }
-    }
-
     // Função Bogo Sort
     template <typename T>
     void bogoSort(Node<T>* head) {
@@ -63,22 +39,19 @@ namespace Sorting
 
         while (!isSorted(head)) {
             // Embaralha os elementos
-            shuffleList(head, size);
+            LinkedList::shuffleList(head, size);
         }
     }
 
     // Instanciação explícita para os tipos inteiros
     template bool isSorted(LinkedList::Node<int>*);
-    template void shuffleList(Node<int>*, int);
     template void bogoSort(Node<int>*);
 
     // Instanciação explícita para os tipos float
     template bool isSorted(LinkedList::Node<float>*);
-    template void shuffleList(Node<float>*, int);
     template void bogoSort(Node<float>*);
 
     // Instanciação explícita para os tipos char
-    template void shuffleList(Node<char>*, int);
     template bool isSorted(LinkedList::Node<char>*);
     template void bogoSort(Node<char>*);
 

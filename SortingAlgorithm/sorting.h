@@ -28,9 +28,6 @@ namespace Sorting
     bool isSorted(Node<T>*);
 
     template <typename T>
-    void shuffleList(Node<T>*, int);
-
-    template <typename T>
     void bogoSort(Node<T>*);
 
     // Shell Sort
