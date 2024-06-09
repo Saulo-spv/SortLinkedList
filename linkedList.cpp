@@ -97,7 +97,7 @@ namespace LinkedList
             Node<T>* current = head;
 
             // Percurso até o fim da lista
-            while (current != nullptr & current->Value != value) current = current->ptrNext;
+            while (current != nullptr && current->Value != value) current = current->ptrNext;
             
             // Se não foi encontrado o nó buscado
             if (current == nullptr)

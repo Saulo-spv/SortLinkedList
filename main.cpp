@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstdlib> 
+#include <cstdlib>
 #include <chrono>
 
 #include "linkedList.h"
@@ -10,6 +10,7 @@ using std::cout;
 using std::cin;
 using std::string;
 using std::endl;
+using std::cerr;
 
 using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
@@ -66,8 +67,9 @@ int main() {
     }
 */
 
+/*
    LinkedList::Node<int>* head1 = nullptr;
-    for (int c = 1; c <= 200000; c++) {
+    for (int c = 1; c <= 10; c++) {
         addElementFront(&head1, c);
     }
 
@@ -78,7 +80,7 @@ int main() {
     for (int i = 0; i < 100; i++) {
 
         auto timeStart = high_resolution_clock::now();
-        LinkedList::shuffleList(head1, 200000);
+        LinkedList::shuffleList(head1, 10);
         auto timeStop = high_resolution_clock::now();
         auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
         cout << "Execution " << i + 1 << " shuffle: " << timeDuration.count() << " nanoseconds" << endl;
@@ -110,4 +112,47 @@ int main() {
         cout << "Execution " << i + 1 << " BFS: " << timeDurationBfs.count() << " nanoseconds" << endl;
 
     }
+
+*/
+
+  srand(time(NULL));
+
+    const int size = 10000;
+    int values[size];
+    LinkedList::Node<int>* head = nullptr;
+    BinaryTree::Node<int>* tree = nullptr;
+
+    for (int iteration = 1; iteration <= 100; ++iteration) {
+        // Gerar um array com 200000 valores
+        for (int i = 0; i < size; ++i) {
+            values[i] = rand() % 1000000 + 1;
+        }
+
+        head = nullptr;
+        tree = nullptr;
+
+        // Medir o tempo de criação da lista ligada
+        auto start = high_resolution_clock::now();
+        for (int i = 0; i < size; ++i) {
+            LinkedList::addElementEnd(&head, values[i]);
+        }
+        auto end = high_resolution_clock::now();
+        auto durationList = duration_cast<nanoseconds>(end - start).count();
+        cout << "Iteration " << iteration << "  List:  " << durationList << " nanoseconds" << endl;
+
+        // Medir o tempo de criação da árvore binária de busca
+        start = high_resolution_clock::now();
+        tree = BinaryTree::createTreeNode<int>(values[0]);
+        for (int i = 0; i < size; ++i) {
+            BinaryTree::insertNode(tree, values[i]);
+            
+        }
+        end = high_resolution_clock::now();
+        auto durationTree = duration_cast<nanoseconds>(end - start).count();
+        cout << "Iteration " << iteration << "  Tree:  " << durationTree << " nanoseconds" << endl;
+        cout << endl;
+    }
+
+    return 0;
+
 }
