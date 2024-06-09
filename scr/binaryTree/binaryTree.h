@@ -30,6 +30,8 @@ namespace BinaryTree
     Node<T>* deleteNode(Node<T>*, T);
 
     template <typename T>
+    void deleteTree(Node<T>*);
+    template <typename T>
     void traversePreOrder(Node<T>*);
 
     template <typename T>

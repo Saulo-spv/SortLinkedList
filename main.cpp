@@ -2,9 +2,9 @@
 #include <cstdlib>
 #include <chrono>
 
-#include "linkedList.h"
-#include "SortingAlgorithm/sorting.h"
-#include "binaryTree.h"
+#include "scr/linkedList/linkedList.h"
+#include "scr/linkedList/SortingAlgorithm/sorting.h"
+#include "scr/binaryTree/binaryTree.h"
 
 using std::cout;
 using std::cin;
@@ -66,22 +66,26 @@ int main() {
         freeList(&head1);
     }
 */
+    
+    /*ANÁLISE DE TEMPO: BFS versus DFS*/
 
+    // Criação de lista incial com elementos de 1 a tam
     int tam = 300;
-
-   LinkedList::Node<int>* head1 = nullptr;
+    LinkedList::Node<int>* head1 = nullptr;
     for (int c = 1; c <= tam; c++) {
         addElementFront(&head1, c);
     }
 
-    BinaryTree::Node<int>* tree;
+    // Inicialização da árvore
+    BinaryTree::Node<int>* tree = nullptr;
 
-    // Criar 100 árvores binárias e analisar o tempo de busca
-    for (int i = 0; i < 100; i++) {
-
+    // Cria 100 árvores binárias e analisa o tempo de busca
+    for (int i = 0; i < 100; i++)
+    {
+        // Reordena aleatoriamente os elementos da lista
         LinkedList::shuffleList(head1, tam);
 
-        // Cria a árvore com os valores embaralhados
+        // Cria a árvore com os valores da lista
         LinkedList::Node<int>* current = head1;
         tree = BinaryTree::createTreeNode<int>(current->Value);
         current = current->ptrNext;
@@ -90,7 +94,7 @@ int main() {
             current = current->ptrNext;
         }
 
-        // Gera um valor de busca aleatório
+        // Gera aleatoriamente um valor a ser buscado
         int searchValue = rand() % tam + 1;
         current = head1;
         int k = 0;
@@ -113,16 +117,20 @@ int main() {
         auto timeDurationBfs = duration_cast<nanoseconds>(timeStopBfs - timeStartBfs);
         cout << "Execution " << i + 1 << " BFS: " << timeDurationBfs.count() << " nanoseconds" << endl;
 
+        // Limpa a árvore utilizada
+        BinaryTree::deleteTree(tree);
     }
 
+    /*ANÁLISE DE TEMPO: Criação entre árvores e listas*/
 
-    // Cria 100 arvores e listas a partir de um vetor e mede o tempo
+    // Inicialização dos parâmetros (tamanho do array, inicialização da lista etc.)
     const int size = 10000;
     int values[size];
     LinkedList::Node<int>* head = nullptr;
-    tree = nullptr;
 
-    for (int iteration = 1; iteration <= 100; ++iteration) {
+    // Gera 100 árvores e listas a partir de um vetor e mede o tempo
+    for (int iteration = 1; iteration <= 100; ++iteration)
+    {
         // Gerar um array com 200000 valores
         for (int i = 0; i < size; ++i) {
             values[i] = rand() % 1000000 + 1;
@@ -131,8 +139,9 @@ int main() {
         head = nullptr;
         tree = nullptr;
 
-        // Medir o tempo de criação da lista ligada
+        // Medir o tempo de criação da lista encadeada
         auto start = high_resolution_clock::now();
+        // Criando a lista a partir do array
         for (int i = 0; i < size; ++i) {
             LinkedList::addElementEnd(&head, values[i]);
         }
@@ -142,7 +151,7 @@ int main() {
 
         // Medir o tempo de criação da árvore binária de busca
         start = high_resolution_clock::now();
-        tree = BinaryTree::createTreeNode<int>(values[0]);
+        // Criando a árvore a partir do array
         for (int i = 0; i < size; ++i) {
             BinaryTree::insertNode(tree, values[i]);
         }

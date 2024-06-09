@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "binaryTree.h"
-#include "linkedList.h"
+#include "../linkedList/linkedList.h"
 
 using namespace std;
 
@@ -139,6 +139,19 @@ namespace BinaryTree
     }
 
     template <typename T>
+    void deleteTree(Node<T>* startNode)
+    {
+        // Caso a árvore seja vazia
+        if (startNode == nullptr) return;
+        // Caso existam sub-árvores
+        if (startNode->ptrLeft != nullptr) deleteTree(startNode->ptrLeft);
+        if (startNode->ptrRight != nullptr) deleteTree(startNode->ptrRight);
+
+        free(startNode);
+        startNode = nullptr;
+    }
+
+    template <typename T>
     void traversePreOrder(Node<T>* startNode)
     {
         if (startNode != nullptr)
@@ -218,6 +231,7 @@ namespace BinaryTree
     template Node<int>* dfsSearchNode(Node<int>*, int);
     template Node<int>* lesserLeaf(Node<int>*);
     template Node<int>* deleteNode(Node<int>*, int);
+    template void deleteTree(Node<int>*);
     template void traversePreOrder(Node<int>*);
     template void traverseInOrder(Node<int>*);
     template void traversePostOrder(Node<int>*);

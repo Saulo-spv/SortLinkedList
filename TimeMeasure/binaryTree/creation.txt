@@ -1,0 +1,300 @@
+Iteration 1  List: 190763800 nanoseconds
+Iteration 1  Tree: 825200 nanoseconds
+
+Iteration 2  List: 183399300 nanoseconds
+Iteration 2  Tree: 658600 nanoseconds
+
+Iteration 3  List: 182316100 nanoseconds
+Iteration 3  Tree: 694700 nanoseconds
+
+Iteration 4  List: 188400000 nanoseconds
+Iteration 4  Tree: 626600 nanoseconds
+
+Iteration 5  List: 180806600 nanoseconds
+Iteration 5  Tree: 547700 nanoseconds
+
+Iteration 6  List: 189288300 nanoseconds
+Iteration 6  Tree: 971100 nanoseconds
+
+Iteration 7  List: 208174100 nanoseconds
+Iteration 7  Tree: 554600 nanoseconds
+
+Iteration 8  List: 188242900 nanoseconds
+Iteration 8  Tree: 562800 nanoseconds
+
+Iteration 9  List: 192722200 nanoseconds
+Iteration 9  Tree: 556500 nanoseconds
+
+Iteration 10  List: 203310900 nanoseconds
+Iteration 10  Tree: 670100 nanoseconds
+
+Iteration 11  List: 186857700 nanoseconds
+Iteration 11  Tree: 586300 nanoseconds
+
+Iteration 12  List: 175621500 nanoseconds
+Iteration 12  Tree: 592600 nanoseconds
+
+Iteration 13  List: 181824900 nanoseconds
+Iteration 13  Tree: 610700 nanoseconds
+
+Iteration 14  List: 183494800 nanoseconds
+Iteration 14  Tree: 591900 nanoseconds
+
+Iteration 15  List: 185005100 nanoseconds
+Iteration 15  Tree: 557400 nanoseconds
+
+Iteration 16  List: 174124300 nanoseconds
+Iteration 16  Tree: 564400 nanoseconds
+
+Iteration 17  List: 184804300 nanoseconds
+Iteration 17  Tree: 754900 nanoseconds
+
+Iteration 18  List: 172686700 nanoseconds
+Iteration 18  Tree: 551800 nanoseconds
+
+Iteration 19  List: 173905000 nanoseconds
+Iteration 19  Tree: 589700 nanoseconds
+
+Iteration 20  List: 174132100 nanoseconds
+Iteration 20  Tree: 726600 nanoseconds
+
+Iteration 21  List: 185278100 nanoseconds
+Iteration 21  Tree: 575800 nanoseconds
+
+Iteration 22  List: 176949900 nanoseconds
+Iteration 22  Tree: 625400 nanoseconds
+
+Iteration 23  List: 180599800 nanoseconds
+Iteration 23  Tree: 595000 nanoseconds
+
+Iteration 24  List: 189892300 nanoseconds
+Iteration 24  Tree: 728500 nanoseconds
+
+Iteration 25  List: 183898900 nanoseconds
+Iteration 25  Tree: 582300 nanoseconds
+
+Iteration 26  List: 176929700 nanoseconds
+Iteration 26  Tree: 615200 nanoseconds
+
+Iteration 27  List: 171837300 nanoseconds
+Iteration 27  Tree: 574100 nanoseconds
+
+Iteration 28  List: 170029400 nanoseconds
+Iteration 28  Tree: 570700 nanoseconds
+
+Iteration 29  List: 176078100 nanoseconds
+Iteration 29  Tree: 599800 nanoseconds
+
+Iteration 30  List: 180325000 nanoseconds
+Iteration 30  Tree: 586700 nanoseconds
+
+Iteration 31  List: 186160100 nanoseconds
+Iteration 31  Tree: 570900 nanoseconds
+
+Iteration 32  List: 186041400 nanoseconds
+Iteration 32  Tree: 690300 nanoseconds
+
+Iteration 33  List: 177528700 nanoseconds
+Iteration 33  Tree: 592800 nanoseconds
+
+Iteration 34  List: 176652800 nanoseconds
+Iteration 34  Tree: 880400 nanoseconds
+
+Iteration 35  List: 178119700 nanoseconds
+Iteration 35  Tree: 832200 nanoseconds
+
+Iteration 36  List: 171330900 nanoseconds
+Iteration 36  Tree: 627700 nanoseconds
+
+Iteration 37  List: 176781400 nanoseconds
+Iteration 37  Tree: 678300 nanoseconds
+
+Iteration 38  List: 176659100 nanoseconds
+Iteration 38  Tree: 709500 nanoseconds
+
+Iteration 39  List: 179030900 nanoseconds
+Iteration 39  Tree: 554200 nanoseconds
+
+Iteration 40  List: 178928300 nanoseconds
+Iteration 40  Tree: 585900 nanoseconds
+
+Iteration 41  List: 187115000 nanoseconds
+Iteration 41  Tree: 946600 nanoseconds
+
+Iteration 42  List: 179666700 nanoseconds
+Iteration 42  Tree: 648700 nanoseconds
+
+Iteration 43  List: 204621400 nanoseconds
+Iteration 43  Tree: 868000 nanoseconds
+
+Iteration 44  List: 195412400 nanoseconds
+Iteration 44  Tree: 584300 nanoseconds
+
+Iteration 45  List: 212287200 nanoseconds
+Iteration 45  Tree: 589000 nanoseconds
+
+Iteration 46  List: 199832500 nanoseconds
+Iteration 46  Tree: 563000 nanoseconds
+
+Iteration 47  List: 198187100 nanoseconds
+Iteration 47  Tree: 590800 nanoseconds
+
+Iteration 48  List: 195955100 nanoseconds
+Iteration 48  Tree: 541100 nanoseconds
+
+Iteration 49  List: 205514500 nanoseconds
+Iteration 49  Tree: 798200 nanoseconds
+
+Iteration 50  List: 201280800 nanoseconds
+Iteration 50  Tree: 1016600 nanoseconds
+
+Iteration 51  List: 214483900 nanoseconds
+Iteration 51  Tree: 1386100 nanoseconds
+
+Iteration 52  List: 208429100 nanoseconds
+Iteration 52  Tree: 661800 nanoseconds
+
+Iteration 53  List: 205693200 nanoseconds
+Iteration 53  Tree: 764600 nanoseconds
+
+Iteration 54  List: 205683900 nanoseconds
+Iteration 54  Tree: 511000 nanoseconds
+
+Iteration 55  List: 213125900 nanoseconds
+Iteration 55  Tree: 628800 nanoseconds
+
+Iteration 56  List: 208887300 nanoseconds
+Iteration 56  Tree: 688700 nanoseconds
+
+Iteration 57  List: 211878200 nanoseconds
+Iteration 57  Tree: 611500 nanoseconds
+
+Iteration 58  List: 211030800 nanoseconds
+Iteration 58  Tree: 621700 nanoseconds
+
+Iteration 59  List: 203226000 nanoseconds
+Iteration 59  Tree: 649900 nanoseconds
+
+Iteration 60  List: 205864900 nanoseconds
+Iteration 60  Tree: 1208700 nanoseconds
+
+Iteration 61  List: 203137200 nanoseconds
+Iteration 61  Tree: 794200 nanoseconds
+
+Iteration 62  List: 204552600 nanoseconds
+Iteration 62  Tree: 541600 nanoseconds
+
+Iteration 63  List: 217377000 nanoseconds
+Iteration 63  Tree: 528100 nanoseconds
+
+Iteration 64  List: 215743500 nanoseconds
+Iteration 64  Tree: 581000 nanoseconds
+
+Iteration 65  List: 188075100 nanoseconds
+Iteration 65  Tree: 613700 nanoseconds
+
+Iteration 66  List: 178615800 nanoseconds
+Iteration 66  Tree: 584800 nanoseconds
+
+Iteration 67  List: 183158300 nanoseconds
+Iteration 67  Tree: 743500 nanoseconds
+
+Iteration 68  List: 186866100 nanoseconds
+Iteration 68  Tree: 902300 nanoseconds
+
+Iteration 69  List: 176758900 nanoseconds
+Iteration 69  Tree: 691200 nanoseconds
+
+Iteration 70  List: 176825900 nanoseconds
+Iteration 70  Tree: 590800 nanoseconds
+
+Iteration 71  List: 205998100 nanoseconds
+Iteration 71  Tree: 527100 nanoseconds
+
+Iteration 72  List: 182890500 nanoseconds
+Iteration 72  Tree: 603800 nanoseconds
+
+Iteration 73  List: 180589700 nanoseconds
+Iteration 73  Tree: 844700 nanoseconds
+
+Iteration 74  List: 186932500 nanoseconds
+Iteration 74  Tree: 595600 nanoseconds
+
+Iteration 75  List: 187897600 nanoseconds
+Iteration 75  Tree: 608500 nanoseconds
+
+Iteration 76  List: 181809700 nanoseconds
+Iteration 76  Tree: 577100 nanoseconds
+
+Iteration 77  List: 175587200 nanoseconds
+Iteration 77  Tree: 607300 nanoseconds
+
+Iteration 78  List: 168997400 nanoseconds
+Iteration 78  Tree: 571600 nanoseconds
+
+Iteration 79  List: 168487500 nanoseconds
+Iteration 79  Tree: 605500 nanoseconds
+
+Iteration 80  List: 171364100 nanoseconds
+Iteration 80  Tree: 544900 nanoseconds
+
+Iteration 81  List: 169897300 nanoseconds
+Iteration 81  Tree: 605300 nanoseconds
+
+Iteration 82  List: 176442600 nanoseconds
+Iteration 82  Tree: 682700 nanoseconds
+
+Iteration 83  List: 194354400 nanoseconds
+Iteration 83  Tree: 635800 nanoseconds
+
+Iteration 84  List: 188951500 nanoseconds
+Iteration 84  Tree: 550900 nanoseconds
+
+Iteration 85  List: 176181600 nanoseconds
+Iteration 85  Tree: 611800 nanoseconds
+
+Iteration 86  List: 178555100 nanoseconds
+Iteration 86  Tree: 651200 nanoseconds
+
+Iteration 87  List: 186719000 nanoseconds
+Iteration 87  Tree: 597600 nanoseconds
+
+Iteration 88  List: 183284500 nanoseconds
+Iteration 88  Tree: 777800 nanoseconds
+
+Iteration 89  List: 186905100 nanoseconds
+Iteration 89  Tree: 670500 nanoseconds
+
+Iteration 90  List: 178506300 nanoseconds
+Iteration 90  Tree: 698700 nanoseconds
+
+Iteration 91  List: 178272100 nanoseconds
+Iteration 91  Tree: 581600 nanoseconds
+
+Iteration 92  List: 173951200 nanoseconds
+Iteration 92  Tree: 536000 nanoseconds
+
+Iteration 93  List: 171988700 nanoseconds
+Iteration 93  Tree: 575000 nanoseconds
+
+Iteration 94  List: 168538300 nanoseconds
+Iteration 94  Tree: 567800 nanoseconds
+
+Iteration 95  List: 177178600 nanoseconds
+Iteration 95  Tree: 547400 nanoseconds
+
+Iteration 96  List: 170846500 nanoseconds
+Iteration 96  Tree: 534600 nanoseconds
+
+Iteration 97  List: 171098700 nanoseconds
+Iteration 97  Tree: 599900 nanoseconds
+
+Iteration 98  List: 171399700 nanoseconds
+Iteration 98  Tree: 570800 nanoseconds
+
+Iteration 99  List: 222913600 nanoseconds
+Iteration 99  Tree: 733100 nanoseconds
+
+Iteration 100  List: 226840700 nanoseconds
+Iteration 100  Tree: 724600 nanoseconds
+
