@@ -67,23 +67,19 @@ int main() {
     }
 */
 
-/*
+    int tam = 300;
+
    LinkedList::Node<int>* head1 = nullptr;
-    for (int c = 1; c <= 10; c++) {
+    for (int c = 1; c <= tam; c++) {
         addElementFront(&head1, c);
     }
 
     BinaryTree::Node<int>* tree;
 
-    // Criar 100 árvores binárias, com 200000 nós cada
-    // Analisar o tempo de cada tipo de busca
+    // Criar 100 árvores binárias e analisar o tempo de busca
     for (int i = 0; i < 100; i++) {
 
-        auto timeStart = high_resolution_clock::now();
-        LinkedList::shuffleList(head1, 10);
-        auto timeStop = high_resolution_clock::now();
-        auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-        cout << "Execution " << i + 1 << " shuffle: " << timeDuration.count() << " nanoseconds" << endl;
+        LinkedList::shuffleList(head1, tam);
 
         // Cria a árvore com os valores embaralhados
         LinkedList::Node<int>* current = head1;
@@ -95,32 +91,36 @@ int main() {
         }
 
         // Gera um valor de busca aleatório
-        int searchValue = rand() % 200000 + 1;
+        int searchValue = rand() % tam + 1;
+        current = head1;
+        int k = 0;
+        while(k < searchValue){
+            current = current->ptrNext;
+            k++;
+        }
 
         // Medição do tempo para DFS
         auto timeStartDfs = high_resolution_clock::now();
-        BinaryTree::dfsSearchNode<int>(tree, searchValue);
+        BinaryTree::dfsSearchNode<int>(tree, current->Value);
         auto timeStopDfs = high_resolution_clock::now();
         auto timeDurationDfs = duration_cast<nanoseconds>(timeStopDfs - timeStartDfs);
         cout << "Execution " << i + 1 << " DFS: " << timeDurationDfs.count() << " nanoseconds" << endl;
 
         // Medição do tempo para BFS
         auto timeStartBfs = high_resolution_clock::now();
-        BinaryTree::bfsSearchNode<int>(tree, searchValue);
+        BinaryTree::bfsSearchNode<int>(tree, current->Value);
         auto timeStopBfs = high_resolution_clock::now();
         auto timeDurationBfs = duration_cast<nanoseconds>(timeStopBfs - timeStartBfs);
         cout << "Execution " << i + 1 << " BFS: " << timeDurationBfs.count() << " nanoseconds" << endl;
 
     }
 
-*/
 
-  srand(time(NULL));
-
+    // Cria 100 arvores e listas a partir de um vetor e mede o tempo
     const int size = 10000;
     int values[size];
     LinkedList::Node<int>* head = nullptr;
-    BinaryTree::Node<int>* tree = nullptr;
+    tree = nullptr;
 
     for (int iteration = 1; iteration <= 100; ++iteration) {
         // Gerar um array com 200000 valores
@@ -138,18 +138,17 @@ int main() {
         }
         auto end = high_resolution_clock::now();
         auto durationList = duration_cast<nanoseconds>(end - start).count();
-        cout << "Iteration " << iteration << "  List:  " << durationList << " nanoseconds" << endl;
+        cout << "Iteration " << iteration << "  List: " << durationList << " nanoseconds" << endl;
 
         // Medir o tempo de criação da árvore binária de busca
         start = high_resolution_clock::now();
         tree = BinaryTree::createTreeNode<int>(values[0]);
         for (int i = 0; i < size; ++i) {
             BinaryTree::insertNode(tree, values[i]);
-            
         }
         end = high_resolution_clock::now();
         auto durationTree = duration_cast<nanoseconds>(end - start).count();
-        cout << "Iteration " << iteration << "  Tree:  " << durationTree << " nanoseconds" << endl;
+        cout << "Iteration " << iteration << "  Tree: " << durationTree << " nanoseconds" << endl;
         cout << endl;
     }
 
